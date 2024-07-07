@@ -1,0 +1,72 @@
+@import 'https://fonts.googleapis.com/css?family=Inconsolata';
+
+/* Global styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inconsolata', monospace;
+  background-color: #000;
+  color: #0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.boot-sequence {
+  text-align: center;
+}
+
+.boot-message {
+  opacity: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.blink-cursor {
+  animation: blink-animation 1s step-end infinite;
+}
+
+@keyframes blink-animation {
+  50% {
+    opacity: 0;
+  }
+}
+
+.terminal {
+  text-align: center;
+}
+
+.output-container {
+  height: calc(100% - 3rem); /* Adjust for input line and padding */
+  overflow-y: auto;
+}
+
+.output-line {
+  margin-bottom: 0.5rem;
+}
+
+.input-line {
+  margin-top: 1rem;
+}
+
+.prompt {
+  color: #0f0;
+}
+
+.command {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #0f0;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+.command:focus {
+  outline: none;
+}
